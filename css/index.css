@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  width: 100%; 
+  width: 100%;
   margin: 0;
   font-family: 'M PLUS 1p', sans-serif;
 }
@@ -8,6 +8,7 @@ html {
 body {
   margin: 0;
   height: 100%;
+  font-size: 100%;
   background-image: linear-gradient(25deg, rgba(160, 0, 0, 0.4), rgba(0, 255, 255, 0.4)),
     url(../img/bg.jpg);
   background-position: center center;
@@ -67,7 +68,7 @@ h1 {
 #profile {
   margin: 0;
   height: 100%;
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .4);
   color: #fff;
 }
 
@@ -89,7 +90,7 @@ h1 {
   display: flex;
   align-items: center;
   font-size: 1em;
-  text-shadow: 2px 2px 3px #ccc;
+  text-shadow: 2px 2px 2px #eee;
   padding-top: 10%;
 }
 
@@ -112,6 +113,7 @@ h1 {
 
 #profile_box-subtext {
   width: 50%;
+  min-width: 30%;
   padding-top: 5%;
   font-size: 1em;
   text-shadow: 2px 2px 3px #eee;
@@ -125,6 +127,7 @@ h1 {
 #work {
   margin: 0;
   height: 100%;
+  color: #fff;
 }
 
 #work_box {
@@ -139,12 +142,7 @@ h1 {
   align-items: center;
 }
 
-/*PROFILE TABLE*/
-#profile_box-text {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  font-size: 1em;
-  text-shadow: 2px 2px 3px #ccc;
+#work_box-text {
+  text-shadow: 2px 2px 2px #eee;
   padding-top: 10%;
 }
