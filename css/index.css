@@ -1,0 +1,115 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(25deg, rgba(160, 0, 0, 0.4), rgba(0, 255, 255, 0.4)),
+    url(../img/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+/*BOXTEXT*/
+.box {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box p {
+  margin: 0;
+}
+
+.box_main-text {
+  font-size: 4em;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.box_sub-text {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/*H1*/
+h1 {
+  margin: 0;
+  font-size: 3em;
+  padding: 0;
+}
+
+/*H1 BLACK*/
+.title {
+  border-bottom: 3px solid #eee;
+  width: 100%;
+  color: #eee;
+  font-family: 'Poiret One', sans-serif;
+}
+
+/*MAIN*/
+#main {
+  font-family: 'Poiret One', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+/*PROFILE*/
+#profile {
+  margin: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, .2);
+}
+
+#profile_box {
+  width: 90%;
+  height: 80%;
+}
+
+#profile_box-in {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*PROFILE TABLE*/
+#profile_box-text {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  text-shadow: 2px 2px 3px #ccc;
+  padding: 10% 0;
+}
+
+#profile_box img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+#profile_box-text th, td {
+  padding: 5px 0;
+  color: white;
+  border-bottom: dotted 1px #eee;
+}
+
+#profile_box-text th {
+  padding-right: 30px;
+  font-size: 1.2em;
+}
+
+#profile_box-subtext {
+  color: #fff;
+}
