@@ -25,6 +25,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 30px 0;
 }
 
 .box p {
@@ -67,7 +68,7 @@ h1 {
 /*PROFILE*/
 #profile {
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   background: rgba(0, 0, 0, .4);
   color: #fff;
 }
@@ -123,11 +124,91 @@ h1 {
   padding: 10px 0;
 }
 
+/*SKILL*/
+#skill {
+  margin: 0;
+  min-height: 100%;
+  color: #fff;
+  text-shadow: 2px 2px 2px #bbb;
+}
+
+#skill_box {
+  width: 90%;
+  height: 80%;
+}
+
+#skill_box-in {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1em;
+  padding-top: 10%;
+}
+
+.skill_box-skill {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+  height: 270px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 560px;
+}
+
+.skill_box-main {
+  margin: 10px;
+}
+
+p.skill_box-des {
+  text-align: left;
+  width: 400px;
+  margin: 10px;
+}
+
+p.codename {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.8em;
+  padding: 10px 0;
+}
+
+/*SKILL IMAGE*/
+.skill_box-skill img {
+  background: #fff;
+  border-radius: 50%;
+}
+
+/*STAR LATE*/
+.star {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.star .star-item {
+  position: absolute;
+  overflow: hidden;
+}
+
+.star .star-item:before {
+  content: "★★★★★";
+  color: #ffcc33;
+  text-shadow: none;
+}
+
+.star:after {
+  content: "★★★★★";
+  color: #ccc;
+  text-shadow: none;
+}
+
 /*WORK*/
 #work {
   margin: 0;
-  height: 100%;
+  min-height: 100%;
   color: #fff;
+  background: rgba(0, 0, 0, .4);
 }
 
 #work_box {
@@ -138,11 +219,43 @@ h1 {
 #work_box-in {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
 }
 
-#work_box-text {
-  text-shadow: 2px 2px 2px #eee;
+#work_box-in {
+  text-shadow: 2px 2px 2px #111;
   padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+p.work_box-des {
+  text-align: left;
+  width: 300px;
+  margin: auto;
+  margin-left: 30px;
+}
+
+.work_box-work {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  height: 300px;
+}
+
+span.work_box-title {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 1.4em;
+}
+
+#work_box-in img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
 }
