@@ -10,9 +10,20 @@ $(document).ready(function($) {
         }, 'slow');
       });
     });
+    // メニュー以外押下で削除
+    $(function() {
+      $('#mask,#menu_navi a').on("click", function() {
+        $("#mask").toggle();
+        $("#menu_icon").toggleClass('active');
+        $("#menu").next().animate({
+          width: 'toggle'
+        }, 'slow');
+      });
+    });
     /*アクティブ*/
     $(function() {
       $('#menu').click(function() {
+        $("#mask").toggle();
         $("#menu_icon").toggleClass('active');
       });
     });
