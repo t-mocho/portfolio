@@ -7,21 +7,42 @@
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:300&display=swap&subset=japanese" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/mobile.css" type="text/css" media="screen and (max-width: 1024px)">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
   <title>PORTFOLIO</title>
 </head>
 
 <body>
 
+  <div id="menu">
+    <label id="menu_icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div id="menu_navi">
+    <nav>
+      <ul>
+        <li><a href="#main">MAIN</a></li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#skill">SKILL</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="http://monyo.wp.xdomain.jp/">BLOG</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
   <div id="main">
-    <div class="box">
-      <div id="main_box">
-        <p class="box_main-text">m.t Portfolio</p>
-        <p class="box_sub-text">Test Page Dayo</p>
-      </div>
+    <div id="main_box">
+      <p id="main-text">M.T PORTFOLIO</p>
+      <p id="sub-text">Challenge Everything</p>
     </div>
   </div>
 
-  <div id="profile">
+  <div id="profile" class="fadein">
     <div class="box">
       <div id="profile_box">
         <div class="title">
@@ -51,15 +72,17 @@
           </div>
           <div id="profile_box-subtext">
             営業からエンジニアへジョブチェンジ！<br>
-            Java案件の運用保守として就業中です。
-            JUnitでテストコード書いたり、改修作業したり。。（なおドキュメントがメイン）
-            現在は自己学習としてHTML/CSS/JS/JQuery/Vue.jsを勉強中。
-            フロントエンジニアを目指してます＼( 'ω')／
-            いずれはPHP、rubyあたりも触ってみたいなー！
-            人との交流も好きなので、最近はITイベントに参加したりしてます。
+            現在はJava案件でJUnitでテストしたりしてます。
+            基本はドキュメントメインなのでもっとコード書きたい。
+            いまはHTML/CSS/JSをメインに自己学習していて、
+            フレームワークとしてJQueryやVue.jsを触りました。Reactも興味あり。
+            今後はPHPやRubyも触ってみたいなーと思ってます！
+            人との交流が好きなので、最近はITイベントにも参加してます。
+            見かけたら仲良くしてください(*^▽^*)
+
             <p>
               座右の銘は<b>「人生いちどきり」</b><br>
-              芸能、ゲーム実況者、イベント運営、アパレル、営業、人材管理、、
+              芸能系、ゲーム実況、イベント運営、アパレル、営業、人材管理、、
               いろいろなことを経験してきました！
               今はコード書くのが楽しくて、エンジニアという仕事に夢中です。
               今後もエンジニアとして働いていきたいと思っています(^O^)
@@ -70,7 +93,7 @@
     </div>
   </div>
 
-  <div id="skill">
+  <div id="skill" class="fadein">
     <div class="box">
       <div id="skill_box">
         <div class="title">
@@ -90,7 +113,7 @@
               運用保守、1年半～<br>
               改修メインのためガリガリ開発やってましたというわけではなく
               自己学習で半年程度、あとは現場でコードを見て動きを覚える、という感じ。
-              テストが多かったのでJUnitのほうが得意だったりします。。
+              テストが多かったのでJavaよりJUnitを書いてました
             </p>
           </div>
           <!--JS-->
@@ -106,8 +129,8 @@
               自己学習、4ヶ月～<br>
               フロントやりたい！と触り始めたJS。
               Javaから入っているので自由度の高さに驚きつつ日々勉強中。
-              JQueryやVue.jsを触ったりしていますが
-              動くものを作るってたのしいですね。好き。
+              JQueryでWebサイトに動きをつけたりVue.jsでTodolistを作成したり
+              HTML/CSSだけでは出来ない動きをつけるってとても楽しいです。
             </p>
           </div>
           <!--HTML,CSS-->
@@ -124,20 +147,19 @@
             </div>
             <p class="skill_box-des">
               自己学習、4ヶ月～<br>
-              触ってていちばんタノシイのがHTML/CSSなのです。
-              すぐ動いてくれるの好き。JSと合わせて動きをつけるの好き。
-              ブロガー時代があったのですが、カスタマイズして見た目を変えるのにハマり
-              エンジニアになりたいと思うきっかけのひとつがHTMLやCSSに触れたことなので
-              今後もお世話になりたいものです。
+              触ってていちばん楽しい。すぐ動いてくれるの好き。
+              JSと合わせて動きをつけるのがとても楽しいですね。
+              ブロガー時代にHTMLとCSSでカスタマイズしていました。
+              それがキッカケでSEに、という気持ちもあるので
+              今後も触っていきたいと思っています。
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  </div>
 
-  <div id="work">
+  <div id="work" class="fadein">
     <div class="box">
       <div id="work_box">
         <div class="title">
@@ -148,7 +170,7 @@
           <div class="work_box-work">
             <p>
               <span class="work_box-title">No1. PORTFOLIO</span><br>
-              <img src="img/work1.png">
+              <a href="http://monyo.html.xdomain.jp/" target="_blank"><img src="img/work1.png"></a>
             </p>
             <p class="work_box-des">
               HTML/CSSを使用して初めて作ったWEBページ。
@@ -187,7 +209,7 @@
           <div class="work_box-work">
             <p>
               <span class="work_box-title">No3. PORTFOLIO</span><br>
-              <img src="img/work3.png">
+              <a href="http://monyo.html.xdomain.jp/portfolio/index.html" target="_blank"><img src="img/work3.png"></a>
             </p>
             <p class="work_box-des">
               いろいろ触った後にもう一度新たなポートフォリオを！
@@ -195,7 +217,7 @@
               いろんなサイトを参考にして、背景画像を固定したり
               JSでかっこよく動きをつけたり、、透過が好きになりました。
               <br><br>
-              制作時間：約40時間程度<br>
+              制作時間：NOW<br>
               エディタ：ATOM/brackets<br>
               使用言語：HTML/CSS/JQuery<br>
               レスポンシブ対応：有
@@ -205,7 +227,7 @@
           <div class="work_box-work">
             <p>
               <span class="work_box-title">No4. WARDPLESS</span><br>
-              <img src="img/work4.png">
+              <a href="http://monyo.wp.xdomain.jp/" target="_blank"><img src="img/work4.png"></a>
             </p>
             <p class="work_box-des">
               ブログ書きたいな。という思いでワードプレス触ってみました。
