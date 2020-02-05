@@ -1,0 +1,123 @@
+/*背景固定*/
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(25deg, rgba(0, 0, 255, 0.4), rgba(255, 0, 0, 0.4)), url(../img/bg.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/*TITLE*/
+#main-text{
+  font-size: 3em;
+}
+
+/*メニュー中身*/
+#menu_navi {
+  background: rgba(0, 0, 0, .6);
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  z-index: 888
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+#menu_navi nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #fff;
+  padding: 0;
+  height: 100%;
+}
+
+#menu_navi ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu_navi a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*TITLE*/
+h1 {
+  margin: 0;
+  font-size: 3em;
+  margin-left: 20px;
+  padding: 0;
+  padding-top: 15px;
+}
+
+/*MAINTEXT位置*/
+.box {
+  padding: 0;
+}
+
+#profile_box {
+  width: 100%;
+}
+
+#profile_box-text {
+  width: 90%;
+  flex-direction: column;
+}
+
+#profile_box-subtext {
+  width: 90%;
+  padding-top: 10%;
+}
+
+#skill_box-des {
+  width: 100%;
+}
+
+p.skill_box-des {
+  width: 90%;
+}
+
+#skill_box {
+  width: 100%;
+}
+
+.skill_box-skill {
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 20px;
+  padding: 20px 0;
+}
+
+#skill_box-in {
+  width: 100%;
+}
+
+#work_box {
+  width: 100%;
+}
+
+span.work_box-title {
+  font-size: 2em;
+}
+
+.work_box-work {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 30px 0;
+  margin: 20px;
+}
+
+p.work_box-des {
+  margin: 0;
+  width: 90%;
+}

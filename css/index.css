@@ -18,6 +18,108 @@ body {
   background-color: #464646;
 }
 
+/*スクロールでフェードイン*/
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+
+/*MENU*/
+#menu {
+  position: fixed;
+  z-index: 999;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, .5);
+  border-radius: 50%;
+  padding: 5px;
+  height: 35px;
+  width: 35px;
+}
+
+#menu_icon,
+#menu_icon span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+#menu_icon {
+  position: relative;
+  width: 35px;
+  height: 35px;
+}
+
+#menu_icon span {
+  position: absolute;
+  left: 5px;
+  width: 26px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+#menu_icon span:nth-of-type(1) {
+  top: 8px;
+}
+
+#menu_icon span:nth-of-type(2) {
+  top: 16px;
+}
+
+#menu_icon span:nth-of-type(3) {
+  bottom: 7px;
+}
+
+/*active*/
+#menu_icon.active {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#menu_icon.active span:nth-of-type(1) {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+  transform: translateY(8px) rotate(-45deg);
+}
+
+#menu_icon.active span:nth-of-type(2) {
+  -webkit-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
+
+#menu_icon.active span:nth-of-type(3) {
+  opacity: 0;
+}
+
+/*メニュー中身*/
+#menu_navi {
+  background: rgba(0, 0, 0, .6);
+  position: fixed;
+  height: 100%;
+  width: 25%;
+  z-index: 888;
+  right: 0;
+  top: 0;
+  display: none;
+}
+
+#menu_navi nav {
+  font-size: 2em;
+  color: #fff;
+  padding: 20px;
+}
+
+#menu_navi ul {
+  list-style: none;
+  padding: 0;
+}
+
+#menu_navi a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /*BOXTEXT*/
 .box {
   height: 100%;
@@ -32,30 +134,23 @@ body {
   margin: 0;
 }
 
-.box_main-text {
-  font-size: 4em;
-  color: #fff;
-  padding: 20px 0;
-}
-
-.box_sub-text {
-  font-size: 1.5em;
-  color: #fff;
-}
-
 /*H1*/
 h1 {
   margin: 0;
   font-size: 3em;
   padding: 0;
+  font-family: 'Poiret One', sans-serif;
 }
 
-/*H1 BLACK*/
+/*H1 BORDER*/
 .title {
   border-bottom: 3px solid #eee;
+  width: 0%;
+}
+
+.title.active {
+  transition: 1.3s;
   width: 100%;
-  color: #eee;
-  font-family: 'Poiret One', sans-serif;
 }
 
 /*MAIN*/
@@ -63,11 +158,25 @@ h1 {
   font-family: 'Poiret One', sans-serif;
   margin: 0;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-text {
+  font-size: 4em;
+  color: #fff;
+  margin: 0;
+}
+
+#sub-text {
+  font-size: 1.5em;
+  color: #fff;
 }
 
 /*PROFILE*/
 #profile {
-  margin: 0;
+  margin: 50px 0;
   min-height: 100%;
   background: rgba(0, 0, 0, .4);
   color: #fff;
@@ -92,7 +201,7 @@ h1 {
   align-items: center;
   font-size: 1em;
   text-shadow: 2px 2px 2px #eee;
-  padding-top: 10%;
+  padding-top: 5%;
 }
 
 #profile_box img {
@@ -126,10 +235,9 @@ h1 {
 
 /*SKILL*/
 #skill {
-  margin: 0;
+  margin: 50px 0;
   min-height: 100%;
   color: #fff;
-  text-shadow: 2px 2px 2px #ccc;
 }
 
 #skill_box {
@@ -144,7 +252,8 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   font-size: 1em;
-  padding-top: 10%;
+  padding-top: 5%;
+  text-shadow: 2px 2px 2px #eee;
 }
 
 .skill_box-skill {
@@ -155,6 +264,7 @@ h1 {
   height: 270px;
   background: rgba(0, 0, 0, 0.3);
   width: 560px;
+  border-radius: 30px;
 }
 
 .skill_box-main {
@@ -205,7 +315,7 @@ p.codename {
 
 /*WORK*/
 #work {
-  margin: 0;
+  margin: 50px 0;
   min-height: 100%;
   color: #fff;
   background: rgba(0, 0, 0, .4);
@@ -223,8 +333,8 @@ p.codename {
 }
 
 #work_box-in {
-  text-shadow: 2px 2px 2px #111;
-  padding-top: 10%;
+  text-shadow: 2px 2px 2px #ccc;
+  padding-top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -255,6 +365,13 @@ span.work_box-title {
 #work_box-in img {
   width: 150px;
   height: auto;
+  overflow: hidden;
   border-radius: 10px;
   margin: 10px;
+  transition: .4s;
+}
+
+#work_box-in img:hover {
+  transform: scale(1.2);
+  opacity: .6;
 }
